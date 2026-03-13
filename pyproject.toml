@@ -9,5 +9,22 @@ dependencies = []
 [dependency-groups]
 dev = [
     "loguru>=0.7.3",
+    "mypy>=1.19.1",
     "ruff>=0.15.4",
 ]
+
+[tool.ruff]
+lint.select = ["F", "D", "ANN"] # Добавить "E", если нужна проверка на 79 символов в строке.
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+exclude = "tests"
+
+# ruff check; mypy .
