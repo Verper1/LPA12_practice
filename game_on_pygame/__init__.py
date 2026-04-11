@@ -1,0 +1,1 @@
+"""mypy ругался на error: Source file found twice under different module names: "config" and "game_on_pygame.config."""
